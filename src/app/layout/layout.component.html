@@ -1,1 +1,17 @@
-<p>layout works!</p>
+<div class="row">
+  <div class="col-12 col-lg-4">
+    <div class="form-group ">
+      <label>Dos columnas</label>
+      <br>
+      <ui-switch [(ngModel)]="twoColumns"></ui-switch>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div [ngClass]="{'col-12 foo':twoColumns,'col-6':!twoColumns}">
+    Column 1
+  </div>
+  <div [ngClass]="{'col-12 foo':twoColumns,'col-6':!twoColumns}">
+    Column 2
+  </div>
+</div>
